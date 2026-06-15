@@ -540,6 +540,123 @@ button[kind="primaryFormSubmit"],
   width:3px; height:3px; border-radius:50%;
   background:rgba(96,165,250,0.8); flex-shrink:0;
 }
+
+/* ===================== RESPONSIVE ===================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr 260px; gap: 44px; padding: 20px 0 52px; }
+  .about-grid { grid-template-columns: repeat(2, 1fr); }
+  .pw { padding: 0 32px; }
+  .hero-section { padding: 0 32px; }
+  .nav { padding: 0 32px; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  /* === NAV === */
+  .nav { padding: 0 18px; height: 58px; }
+  .nav-links a:not(.nav-btn) { display: none !important; }
+  .nav-btn { padding: 8px 15px !important; font-size: 12.5px !important; border-radius: 9px !important; }
+  .nav-brand-name { font-size: 15px !important; }
+  .nav-logo-box { width: 34px; height: 34px; }
+
+  /* === HERO === */
+  .hero-section { margin-top: 58px; padding: 0 18px; }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 16px 0 36px;
+  }
+  .hero-right { display: none !important; }
+  .hero-h1 { font-size: clamp(34px, 8.5vw, 52px); margin-bottom: 14px; }
+  .hero-desc { font-size: 15px; line-height: 1.65; margin-bottom: 24px; max-width: 100%; }
+  .hero-chips { margin-bottom: 28px; gap: 7px; }
+  .h-chip { font-size: 11.5px; padding: 4px 12px; }
+  .hero-stats { padding-top: 22px; }
+  .h-stat { padding: 0 14px; }
+  .h-stat-val { font-size: 24px; }
+  .h-stat-lbl { font-size: 10.5px; }
+  .hero-tag { margin-bottom: 20px; }
+
+  /* === PAGE LAYOUT === */
+  .pw { padding: 0 18px; }
+  .gap { height: 36px; }
+  .gap-sm { height: 14px; }
+  .sec-h2 { font-size: clamp(22px, 5.5vw, 32px); }
+  .sec-sub { font-size: 13.5px; margin-bottom: 22px; }
+
+  /* === FORM === */
+  .form-progress { padding: 18px 18px 4px; }
+  .fp-label { display: none !important; }
+  .fp-line { width: 24px !important; margin: 0 4px !important; }
+  .fp-dot { width: 26px !important; height: 26px !important; font-size: 10px !important; }
+  .form-body { padding: 18px 18px 28px; }
+  .step-t { font-size: 14px; }
+  .step-s { font-size: 11.5px; }
+  .sep { margin: 20px 0; }
+
+  /* Streamlit columns → stack vertically */
+  [data-testid="stHorizontalBlock"] {
+    flex-direction: column !important;
+    gap: 6px !important;
+  }
+  [data-testid="stHorizontalBlock"] > [data-testid="stVerticalBlock"] {
+    width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+  }
+
+  /* Submit button full width */
+  [data-testid="stFormSubmitButton"] { justify-content: stretch !important; }
+  [data-testid="stFormSubmitButton"] > button {
+    width: 100% !important;
+    min-width: 0 !important;
+    justify-content: center !important;
+    padding: 14px 24px !important;
+  }
+
+  /* === RESULT === */
+  .res-card { padding: 28px 20px; border-radius: 18px; }
+  .res-lbl { font-size: clamp(30px, 8vw, 48px); }
+  .rc-n { font-size: 34px; }
+  .res-conf { margin-bottom: 24px; }
+  .sub-card { padding: 20px 18px; }
+  .ana-body { font-size: 13.5px; }
+
+  /* === ABOUT === */
+  .about-grid { grid-template-columns: 1fr; gap: 10px; }
+
+  /* === FOOTER === */
+  .site-footer { padding: 22px 18px; }
+  .ft-inner { flex-direction: column; align-items: flex-start; gap: 6px; }
+}
+
+/* Small phones */
+@media (max-width: 430px) {
+  .nav-brand-name { display: none !important; }
+  .nav-logo-box { width: 32px; height: 32px; }
+  .sc-mono { font-size: 15px; }
+
+  .hero-h1 { font-size: clamp(30px, 8vw, 42px); letter-spacing: -0.025em; }
+  .hero-desc { font-size: 14px; }
+  .h-stat { padding: 0 10px; }
+  .h-stat-val { font-size: 20px; }
+  .h-stat-lbl { font-size: 9.5px; }
+
+  .form-body { padding: 16px 14px 24px; }
+  .form-progress { padding: 16px 14px 4px; }
+  .fp-line { width: 18px !important; }
+
+  .res-card { padding: 22px 16px; }
+  .res-lbl { font-size: clamp(26px, 7.5vw, 38px); }
+  .rc-n { font-size: 28px; }
+  .res-chips { gap: 5px; }
+  .res-chip { font-size: 11px; padding: 4px 9px; }
+
+  .sub-card { padding: 18px 14px; }
+  .sec-h2 { font-size: clamp(20px, 5.5vw, 28px); }
+}
 </style>
 """
 st.markdown(CSS, unsafe_allow_html=True)
