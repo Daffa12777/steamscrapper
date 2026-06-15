@@ -596,15 +596,36 @@ button[kind="primaryFormSubmit"],
   .step-s { font-size: 11.5px; }
   .sep { margin: 20px 0; }
 
+  /* Fix spacing: hint text nabrak label berikutnya */
+  .field-hint { margin-bottom: 14px !important; }
+  .form-body .element-container,
+  .form-body .stMarkdown { margin-bottom: 4px !important; }
+
   /* Streamlit columns → stack vertically */
   [data-testid="stHorizontalBlock"] {
     flex-direction: column !important;
-    gap: 6px !important;
+    gap: 0 !important;
   }
   [data-testid="stHorizontalBlock"] > [data-testid="stVerticalBlock"] {
     width: 100% !important;
     min-width: 0 !important;
     flex: 1 1 100% !important;
+    margin-bottom: 10px !important;
+  }
+  [data-testid="stHorizontalBlock"] > [data-testid="stVerticalBlock"]:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* Fix multiselect tag terpotong */
+  [data-testid="stMultiSelect"] [data-baseweb="tag"] {
+    max-width: calc(100% - 32px);
+    overflow: hidden;
+  }
+  [data-testid="stMultiSelect"] [data-baseweb="tag"] span {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    max-width: 140px;
   }
 
   /* Submit button full width */
@@ -644,9 +665,15 @@ button[kind="primaryFormSubmit"],
   .h-stat-val { font-size: 20px; }
   .h-stat-lbl { font-size: 9.5px; }
 
-  .form-body { padding: 16px 14px 24px; }
-  .form-progress { padding: 16px 14px 4px; }
+  .form-body { padding: 14px 14px 22px; }
+  .form-progress { padding: 14px 14px 4px; }
   .fp-line { width: 18px !important; }
+
+  /* Pastikan spacing hint tetap ada di HP kecil */
+  .field-hint { margin-bottom: 16px !important; font-size: 11px !important; }
+  [data-testid="stHorizontalBlock"] > [data-testid="stVerticalBlock"] {
+    margin-bottom: 8px !important;
+  }
 
   .res-card { padding: 22px 16px; }
   .res-lbl { font-size: clamp(26px, 7.5vw, 38px); }
