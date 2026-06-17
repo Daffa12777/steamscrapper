@@ -1,8 +1,8 @@
-# 🎮 Steam Game Type Classifier
+#  Steam Game Type Classifier
 
 > **Tugas Besar Machine Learning** — Klasifikasi jenis game Steam ke 3 kategori berdasarkan mode pemain (Singleplayer / Multiplayer / Hybrid) menggunakan supervised learning, dilengkapi web app deployment dengan Streamlit.
 
-🔗 **Live Demo:** _isi link Streamlit Cloud kamu di sini_
+🔗 **Live Demo:** https://steamscrapper-7yjscw9mobyta7bvqt5qrq.streamlit.app/
 
 ---
 
@@ -13,7 +13,7 @@
 
 ---
 
-## 📊 Tentang Project
+##  Tentang Project
 
 Project ini membangun model **klasifikasi multi-kelas** untuk memprediksi **jenis game Steam** berdasarkan metadata-nya (harga, umur, OS support, controller support, jumlah review, kategori Steam).
 
@@ -32,7 +32,7 @@ Target klasifikasi dibagi menjadi **3 tier** berdasarkan kolom `Number Of Player
 
 ---
 
-## 🗂️ Dataset
+##  Dataset
 
 - **Sumber:** Web scraping dari [Steam Store](https://store.steampowered.com) (script: `steamscrapper/Scrapper2.py`)
 - **Jumlah data:** 1.130 baris × 13 kolom asli (19 kolom setelah feature engineering)
@@ -59,7 +59,7 @@ Target klasifikasi dibagi menjadi **3 tier** berdasarkan kolom `Number Of Player
 
 ---
 
-## 📁 Struktur Folder
+##  Struktur Folder
 
 ```
 KELOMPOK1/
@@ -80,7 +80,7 @@ KELOMPOK1/
 
 ---
 
-## 🤖 Pipeline Machine Learning
+##  Pipeline Machine Learning
 
 Alur lengkap ada di notebook `Tugas_Besar_ML_JenisGame.ipynb`:
 
@@ -133,7 +133,7 @@ joblib (.pkl) → siap untuk deployment Streamlit.
 
 ---
 
-## 📈 Hasil Akhir Model
+##  Hasil Akhir Model
 
 | Metrik | Skor | Catatan |
 |--------|------|---------|
@@ -154,7 +154,7 @@ joblib (.pkl) → siap untuk deployment Streamlit.
 
 ---
 
-## 🚀 Cara Menjalankan
+##  Cara Menjalankan
 
 ### 1. Setup Environment
 
@@ -181,7 +181,7 @@ App akan terbuka di `http://localhost:8501`. Isi karakteristik game di form → 
 
 ---
 
-## 🌐 Deployment
+##  Deployment
 
 App di-deploy menggunakan **Streamlit Community Cloud** (gratis, tanpa server sendiri).
 
@@ -197,7 +197,7 @@ App auto-redeploy setiap kali ada `git push` ke `main`.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Komponen | Tool |
 |----------|------|
@@ -211,7 +211,7 @@ App auto-redeploy setiap kali ada `git push` ke `main`.
 
 ---
 
-## 📌 Temuan Penting
+##  Temuan Penting
 
 1. **Tidak ada duplikasi** di dataset baru (1130 game unik), berbeda dari iterasi sebelumnya yang punya duplikasi parah lintas kategori. Tidak butuh group-aware split.
 
@@ -228,7 +228,7 @@ App auto-redeploy setiap kali ada `git push` ke `main`.
 
 ---
 
-## 🎯 Keterbatasan Model
+##  Keterbatasan Model
 
 - Model hanya membaca **metadata publik** (harga, OS, controller, review count, kategori)
 - **Genre, gameplay, story, elemen sosial tidak terukur** — game dengan metadata mirip bisa punya gameplay yang sangat berbeda
@@ -237,13 +237,11 @@ App auto-redeploy setiap kali ada `git push` ke `main`.
 
 ---
 
-## 📄 Lisensi & Atribusi
+##  Lisensi & Atribusi
 
 Project ini dibuat untuk keperluan akademik (Tugas Besar Machine Learning).
 Data dari Steam Store dimiliki oleh Valve Corporation.
 Scraping dilakukan dengan menghormati `robots.txt` dan rate limit Steam.
 
----
 
----
 
