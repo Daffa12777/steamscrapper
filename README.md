@@ -6,17 +6,10 @@
 
 ---
 
-## 👥 Identitas Kelompok
 
-| Nama | NIM |
-|------|-----|
-| _isi nama_ | _isi NIM_ |
-| _isi nama_ | _isi NIM_ |
-| _isi nama_ | _isi NIM_ |
 
-**Mata Kuliah:** _isi nama mata kuliah_
-**Kelas:** _isi kelas_
-**Dosen Pengampu:** _isi nama dosen_
+**Mata Kuliah:** AI BIG DATA
+
 
 ---
 
